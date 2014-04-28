@@ -41,12 +41,12 @@ a {
 
 .bg-normal {
     z-index:10;
-    background-image:url('/background.jpeg');
+    background-image:url('/background.jpg');
 }
 
 .bg-blur {
     z-index:20;
-    background-image:url('/background_blur.jpeg');
+    background-image:url('/background_blur.jpg');
     opacity:0;
 }
 
