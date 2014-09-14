@@ -150,7 +150,19 @@ ul.nav li a:hover {
     text-align: center;
 }
 
-.contact-btn a {
+.btn-twt a {
+    color: rgb(150,150,150);
+}
+
+.btn-fb a {
+    color: rgb(150,150,150);
+}
+
+.btn-gh a {
+    color: rgb(150,150,150);
+}
+
+.btn-gp a {
     color: rgb(150,150,150);
 }
 
