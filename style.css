@@ -154,8 +154,20 @@ ul.nav li a:hover {
     color: rgb(150,150,150);
 }
 
-.contact-btn a:hover {
+.btn-fb a:hover {
     color: rgb(59,89,152);
+}
+
+.btn-twt a:hover {
+    color: rgb(85,772,282);
+}
+
+.btn-gh a:hover {
+    color: #000000;
+}
+
+.btn-gp a:hover {
+    color: #dd4b39;
 }
 
 .contact-btn .fa {
