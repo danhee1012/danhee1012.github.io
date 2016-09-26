@@ -1,0 +1,11 @@
+.paging-button {
+  visibility: hidden;
+}
+
+.button-container {
+  clear: both;
+}
+
+.post-auth {
+    display: none;
+}

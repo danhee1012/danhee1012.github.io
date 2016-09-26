@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Youtube Playlist Organizer</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div id="login-container" class="pre-auth">This application requires access to your YouTube account. Please <a href="#" id="login-link">authorize</a> to continue.
+    </div>
+    <div class="post-auth">
+        <br>
+        <label>Current Playlist Id:
+            <input id="curr-playlist-id" value="PLKhKIbIBTzTqyo07bBmIrQ9G_ajWSz13T" type="text">
+        </label>
+        <br>
+        <label>Destination Playlist Id:
+            <input id="dest-playlist-id" value="PLKhKIbIBTzTrKOEKz51qmlRVVJvuDbc_N" type="text">
+        </label>
+        <br>
+        <button id="submit">Submit</button>
+        <div id="video-list">
+            <h3>Current Playlist:</h3>
+            <div id="curr-video-container"></div>
+
+            <h3>Destination Playlist:</h3>
+            <div id="dest-video-container"></div>
+        </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="auth.js"></script>
+    <script src="playlist_updates.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBbtuQOyB3OwAyA5Jqm3NI5pyYGuyq8oSg",
+            authDomain: "weighty-casing-144220.firebaseapp.com",
+            databaseURL: "https://weighty-casing-144220.firebaseio.com",
+            storageBucket: "weighty-casing-144220.appspot.com",
+            messagingSenderId: "13378954542"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+</body>
+
+</html>
