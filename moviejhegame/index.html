@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>YouTube Timer Player</title>
-	<meta name="description" content="YouTube Timer Player">
+	<title>YouTube Movie Player</title>
+	<meta name="description" content="YouTube Movie Player">
 	<meta name="author" content="SitePoint">
 
 	<link rel="stylesheet" href="css/styles.css?v=1.0">
@@ -17,19 +17,18 @@
 	<![endif]-->
 </head>
 <body>
-	<h1>YouTube Timer Player</h1>
+	<h1>YouTube Movie Player</h1>
 	<select id="playlist" multiple="multiple">
 	</select>
 	<div id="player"></div>
 	<div id="title">Title:</div>
 	<div id="btn-container">
-		<button class="btn-play" value="1">1s</button>
-        <button class="btn-play" value="2">2s</button>
-		<button class="btn-play" value="3">3s</button>
-		<button class="btn-play" value="5">5s</button>
-		<button class="btn-play" value="10">10s</button>
-		<button class="btn-play" value="100000000">All</button>
+		<button class="btn-play" value="100000000">Play</button>
 		<button class="btn-pause">Pause</button>
+	</div>
+	<div>
+		<div id="start" value="0"></div>
+		<div id="end" value="0"></div>
 	</div>
 	<script src="js/scripts.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>

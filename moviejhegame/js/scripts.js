@@ -1,25 +1,33 @@
 $(document).ready(function() {
     var config = {
-    apiKey: "AIzaSyAKN4T4KffUnW7fGqv8bc9PJtwR5b0Xeo8",
-    authDomain: "youtube-timer-player.firebaseapp.com",
-    databaseURL: "https://youtube-timer-player.firebaseio.com",
-    projectId: "youtube-timer-player",
-    storageBucket: "youtube-timer-player.appspot.com",
-    messagingSenderId: "187405860866"
-  };
-  firebase.initializeApp(config);
+        apiKey: "AIzaSyBfkOFqUQwbolFWZAcopxIC66UZs0Ggqt8",
+        authDomain: "movie-player-4e166.firebaseapp.com",
+        databaseURL: "https://movie-player-4e166.firebaseio.com",
+        projectId: "movie-player-4e166",
+        storageBucket: "movie-player-4e166.appspot.com",
+        messagingSenderId: "629996184031"
+    };
+    firebase.initializeApp(config);
     
     var fbPlaylist = firebase.database().ref('playlist/');
     fbPlaylist.on('value', function(snapshot) {
         $("#playlist").empty();
-        
+
         snapshot.forEach(function(data) {
-            var videoId = data.val().split("=").pop();
-            $("#playlist").append("<option value='" + videoId + "'>" + videoId + "</option>");
+            var key = data.key;
+            var title = data.val().title;
+            var start = data.val().start;
+            var end = data.val().end;
+            var videoId = key.split("=").pop();
+            $("#playlist").append("<option value='" + videoId + "' title='" + title + "' start='" + start + "' end='" + end + "'>" + videoId + "</option>");
         });
 
         $("#playlist option").first().attr("selected", "selected");
-        initYtPlayer($("#playlist option:selected").val());
+        initYtPlayer($("#playlist option:selected").val(), 
+            $("#playlist option:selected").attr("title"),
+            $("#playlist option:selected").attr("start"), 
+            $("#playlist option:selected").attr("end"));
+
     });
 
     var stopPlayAt = 5, // Stop play at time in seconds
@@ -35,10 +43,14 @@ $(document).ready(function() {
     // after the API code downloads.
     var player;
 
-    function initYtPlayer(videoId) {
+    function initYtPlayer(videoId, title, start, end) {
         if(player != null) {
             player.destroy();
         }
+
+        $("#title").attr("value", title);
+        $("#start").attr("value", start);
+        $("#end").attr("value", end);
 
         player = new YT.Player("player", {
             "height": "360",
@@ -55,11 +67,16 @@ $(document).ready(function() {
     // This automatically starts the video playback when the player is loaded.
     function onPlayerReady(event) {
         // event.target.playVideo();
-        $('#title').text("Title: " + player.getVideoData().title);
+        var title = $("#title").attr("value");
+        var start = parseInt($("#start").attr("value"));
+        var end = parseInt($("#end").attr("value"));
+
+        $('#title').text("Title: " + title);
 
         $(".btn-play").click(function() {
-            player.seekTo(0,true); 
-            stopPlayAt = parseInt($(this).val());
+            console.log(start);
+            player.seekTo(start, true); 
+            stopPlayAt = end;
             player.playVideo();
         });
 
@@ -69,7 +86,10 @@ $(document).ready(function() {
         });
 
         $("#playlist").change(function() {
-            initYtPlayer($("#playlist option:selected").val());
+            initYtPlayer($("#playlist option:selected").val(), 
+                $("#playlist option:selected").attr("title"),
+                $("#playlist option:selected").attr("start"), 
+                $("#playlist option:selected").attr("end"));
         });
     }
 
