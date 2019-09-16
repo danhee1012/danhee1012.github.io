@@ -1,0 +1,12 @@
+#result-table {
+	text-align: center;
+	display: none;
+}
+
+#result-table th {
+	vertical-align:	middle;
+}
+
+#result-table td {
+	vertical-align:	middle;
+}

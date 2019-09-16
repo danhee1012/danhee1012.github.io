@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Fantasy Football Stat Viewer</title>
+	<meta name="description" content="Fantasy Football Stat Viewer">
+	<meta name="author" content="SitePoint">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/styles.css">
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<h1>Fantasy Football Stat Viewer</h1>
+		<form class="form-inline">
+			<label class="my-1 mr-2">Team:</label>
+			<select id="team-list" class="custom-select my-1 mr-sm-2"></select>
+			<label class="my-1 mr-2">Week:</label>
+			<select id="week-list" class="custom-select my-1 mr-sm-2">
+				<option>ALL</option>
+			</select>
+			<button type="button" id="submit" class="btn btn-dark">Submit</button>
+		</form>
+		<div id="result-table">
+			<table class="table">
+				<thead class="thead-dark">
+				    <tr>
+				    	<th scope="col">Position</th>
+				    	<th scope="col">Depth Order</th>
+				    	<th scope="col">Name</th>
+				    	<th scope="col">Pass Attempts</th>
+				    	<th scope="col">Pass Completed</th>
+				    	<th scope="col">Passing Yards</th>
+				    	<th scope="col">Rush Attempts </th>
+				    	<th scope="col">Rushing Yards</th>
+				    	<th scope="col">Targets</th>
+				    	<th scope="col">Receiving</th>
+				    	<th scope="col">Receiving Yards</th>
+				    </tr>
+			  	</thead>
+			  	<tbody></tbody>
+			</table>
+		</div>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
