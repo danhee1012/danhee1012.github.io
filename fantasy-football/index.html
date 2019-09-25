@@ -28,20 +28,33 @@
 			<button type="button" id="submit" class="btn btn-dark">Submit</button>
 		</form>
 		<div id="result-table">
-			<table class="table">
+			<table class="table table-bordered table-sm">
 				<thead class="thead-dark">
 				    <tr>
-				    	<th scope="col">Position</th>
-				    	<th scope="col">Depth Order</th>
-				    	<th scope="col">Name</th>
-				    	<th scope="col">Pass Attempts</th>
-				    	<th scope="col">Pass Completed</th>
-				    	<th scope="col">Passing Yards</th>
-				    	<th scope="col">Rush Attempts </th>
-				    	<th scope="col">Rushing Yards</th>
-				    	<th scope="col">Targets</th>
-				    	<th scope="col">Receiving</th>
-				    	<th scope="col">Receiving Yards</th>
+				    	<th colspan="3" scope="col" id="week-name"></th>
+						<th colspan="5" scope="col">PASS</th>
+						<th colspan="3" scope="col">RUSHING</th>
+						<th colspan="4" scope="col">RECEIVING</th>
+						<th colspan="2" scope="col">FUMBLE</th>
+				    </tr>
+				    <tr>
+						<th scope="col">POS</th>
+						<th scope="col">DEPTH</th>
+						<th scope="col">NAME</th>
+						<th scope="col">ATT</th>
+						<th scope="col">CMP</th>
+						<th scope="col">YD</th>
+						<th scope="col">INT</th>
+						<th scope="col">TD</th>
+						<th scope="col">ATT</th>
+						<th scope="col">YD</th>
+						<th scope="col">TD</th>
+						<th scope="col">TAR</th>
+						<th scope="col">REC</th>
+						<th scope="col">YD</th>
+						<th scope="col">TD</th>
+						<th scope="col">FUM</th>
+						<th scope="col">LOST</th>
 				    </tr>
 			  	</thead>
 			  	<tbody></tbody>

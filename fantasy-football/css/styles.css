@@ -10,3 +10,7 @@
 #result-table td {
 	vertical-align:	middle;
 }
+
+#result-table .player-stat {
+	background-color: #c6c8ca;
+}
