@@ -60,8 +60,8 @@ const PLAY_TYPE_CLASS_TO_LIMIT = {
     "player-stat-rec"      : [7, 5],
     "player-stat-rec-yd"   : [60, 40],
     "player-stat-rec-td"   : [1, 0],
-    "player-stat-fum"      : [1, -1],
-    "player-stat-fum-lost" : [1, -1],
+    "player-stat-fum"      : [10000, -1],
+    "player-stat-fum-lost" : [10000, -1],
 }
 
 /* Functions */
