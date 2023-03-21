@@ -1,9 +1,26 @@
-.cspio body {
+html {
+  height: 100%;
+  margin-top: 0 !important;
+  overflow: hidden;
+  background: #ffffff
+    url(https://images.unsplash.com/photo-1501914334045-d73f21057207?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2700&q=80)
+    no-repeat center bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  text-align: center;
+  padding: 0 0px;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
   background: transparent;
 }
 
-.cspio body,
-.cspio body p {
+body, body p {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -31,11 +48,11 @@
   font-weight: 400;
 }
 
-#cspio-socialprofiles a {
+#social_profiles a {
   color: #ffffff;
 }
 
-#cspio-headline {
+#headline {
   font-family: "Pacifico";
   font-weight: 400;
   font-size: 48px;
@@ -44,7 +61,7 @@
   margin-top: 0;
 }
 
-#cspio-content {
+#content {
   width: 100%;
   padding: 30px;
   margin: 0 auto;
@@ -59,7 +76,7 @@
   background-color: transparent;
 }
 
-#cspio-page {
+#page {
   background: -moz-radial-gradient(
     ellipse at center,
     rgba(0, 0, 0, 0.3) 0%,
@@ -108,28 +125,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#3b000000',GradientType=1 );
 }
 
-html {
-  height: 100%;
-  margin-top: 0 !important;
-  overflow: hidden;
-  background: #ffffff
-    url(https://images.unsplash.com/photo-1501914334045-d73f21057207?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2700&q=80)
-    no-repeat center bottom fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-body {
-  text-align: center;
-  padding: 0 0px;
-  height: 100%;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-#cspio-page {
+#page {
   padding-top: 60px;
   padding-bottom: 0px;
   padding-left: 10px;
@@ -137,32 +133,32 @@ body {
   min-height: 100%;
 }
 
-.flexbox #cspio-page {
+.flexbox #page {
   align-items: center;
   justify-content: center;
   display: flex;
   padding: 10px;
 }
 
-#cspio-description,
-#cspio-logo,
-#cspio-socialprofiles,
+#description,
+#logo,
+#social_profiles,
 #cspio-privacy-policy-txt,
-#cspio-headline {
+#headline {
   margin-bottom: 30px;
 }
 
-#cspio-socialprofiles a {
+#social_profiles a {
   padding-right: 7px;
   display: inline-block;
 }
 
 @media (max-width: 480px) {
-  #cspio-page {
+  #page {
     padding-top: 10px;
   }
 
-  .flexbox #cspio-page {
+  .flexbox #page {
     display: flex;
     padding: 10px;
     flex-direction: column;

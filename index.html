@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html class="cspio">
+<html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Coming Soon Page</title>
+	<title>Coming Soon</title>
 
 	<meta name="generator" content="christopherdanheechoi.me" />
 	<meta name="description" content="">
@@ -33,18 +33,53 @@
 	
 	<!-- Font Awesome -->
 	<script src="https://kit.fontawesome.com/ab71e8f859.js" crossorigin="anonymous"></script>
+	<style>
+		svg {
+            stroke: #FFFFFF;
+            stroke-width: 4;
+            fill: none;
+        }
+		svg polyline {
+            filter: blur(0.5px);
+            animation-name: dash;
+            animation-duration: 10000ms;
+            stroke-dashoffset: 0;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes dash {
+			0% {
+            	stroke-dashoffset: 400;
+				stroke-dasharray: 64 32;
+            } 
+            100% {
+            	stroke-dashoffset: 0;
+				stroke-dasharray: 400;
+            }
+        }
+	</style>
 </head>
 <body>
-	<div id="cspio-page">
-		<div id="cspio-content" class="animate__animated animate__fadeIn">
+	<div id="page">
+		<div id="content" class="animate__animated animate__fadeIn">
 			
-			<img id="cspio-logo" src="./banner.png">
+			<svg id="logo" width="256" height="64">
+                // C
+                <polyline points="0 2, 62 2, 62 14, 14 14, 14 50, 62 50, 62 62, 2 62, 2 2"></polyline>
+                // H
+                <polyline points="64 2, 80 2, 80 26, 112 26, 112 2, 126 2, 126 62, 112 62, 112 40, 112 40, 80 40, 80 62, 66 62, 66 2"></polyline>
+                // O
+                <polyline points="128 2, 190 2, 190 62, 190 62, 130 62, 130 2"></polyline>
+                <polyline points="140 14, 178 14, 178 50, 142 50, 142 14"></polyline>
+                // i
+                <polyline points="192 2, 254 2, 254 14, 230 14, 230 50, 254 50, 254 62, 194 62, 194 50, 218 50, 218 14, 194 14, 194 2"></polyline>
+            </svg>
 			    				
-			<h1 id="cspio-headline">Coming Soon</h1>			    				
+			<h1 id="headline">Coming Soon</h1>			    				
 			
-			<div id="cspio-description">Get ready! Something really cool is coming!</div>			    				
+			<div id="description">Get ready! Something really cool is coming!</div>			    				
 						    						    			    								    			    			    				
-			<div id="cspio-socialprofiles">
+			<div id="social_profiles">
 				<a href="https://www.linkedin.com/in/christopherdanheechoi" target="_blank"><i class="fa-brands fa-linkedin-in fa-2x"></i></a>
 				<a href="https://github.com/danhee1012" target="_blank"><i class="fa-brands fa-github-alt fa-2x"></i></a>
 				<a href="./christopher_choi_resume.pdf" target="_blank"><i class="fa-regular fa-file-pdf fa-2x"></i></a>
@@ -56,14 +91,14 @@
 
 	<script>
 		// Animate Delay
-		setTimeout(function() { jQuery("#cspio-content").show().addClass('animated fadeIn'); }, 400);
+		setTimeout(function() { jQuery("#content").show().addClass('animated fadeIn'); }, 400);
 
 		// Reseize	
 		function resize() {
 				$('head').append("<style id='form-style' type='text/css'></style>");
 		}
 		
-		$('#cspio-content').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
+		$('#content').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
 			function() {
 				var width = $('#cspio-field-wrapper').width();
 				if(width < 480 && width != 0){
